@@ -35,7 +35,7 @@ class SomeAdapter
   implements :something # trait, defines the lookup context
   adapts_instance SomeClass # stores the trait/class combination in the registry
 
-  ...
+  #...
 
 end
 
@@ -46,7 +46,7 @@ class SomeClassAdapter
   implements :something
   adapts_class SomeClass # stores the trait/class or ancestor combination in the registry
 
-  ...
+  #...
 
 end
 ```
