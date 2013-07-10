@@ -26,7 +26,7 @@ module AdapterRegistry
 
       def adapts(&block)
         self.traits.each do |trait|
-          Adapter.register(trait, self, &block)
+          AdapterRegistry.register(trait, self, &block)
         end if (self.traits && block)
       end
 
