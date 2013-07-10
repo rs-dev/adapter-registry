@@ -5,7 +5,7 @@ module AdapterRegistry
       if trait_registry = self[trait]
         trait_registry.select do |entry|
           entry[:for].call(context)
-        end.first.try(:[], :adapter)
+        end.map { |entry| entry[:adapter] }.first
       end
     end
 
