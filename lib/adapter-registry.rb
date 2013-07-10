@@ -16,7 +16,7 @@ module AdapterRegistry
   end
 
   def self.load_directory(path)
-    Dir[path].each do |file|
+    Dir[File.join(path, '*.rb')].each do |file|
       if defined?(Rails)
         require_dependency(file)
       else
