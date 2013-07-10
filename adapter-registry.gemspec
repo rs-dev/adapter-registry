@@ -14,6 +14,7 @@ Gem::Specification.new do |s|
   s.description = "Simple adapter registry"
   s.email = "gems [a] radarservices [d] com"
   s.files            = `git ls-files`.split("\n").reject { |file| file == '.gitignore' }
+  s.test_files       = `git ls-files -- {spec}/*`.split("\n")
   s.extra_rdoc_files = %w[LICENSE README.md]
 
   s.homepage = "http://github.com/rs-dev/adapter-registry"
@@ -21,4 +22,7 @@ Gem::Specification.new do |s|
   # s.rubygems_version = "1.8.24"
   s.summary = "Simple adapter registry for enhancing classes via adapters"
   s.license = "ISC"
+
+  s.add_development_dependency(%q<rake>)
+  s.add_development_dependency(%q<rspec>)
 end
